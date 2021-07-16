@@ -12,20 +12,6 @@ function update(id, content) {
   document.getElementById(id).innerHTML = content;
 }
 
-function mineGold() {
-  gameData.gold += gameData.goldPerClick
-  update("goldMined", format(gameData.gold) + " Gold Mined")
-}
-
-function buyGoldPerClick() {
-  if (gameData.gold >= gameData.goldPerClickCost) {
-    gameData.gold -= gameData.goldPerClickCost
-    gameData.goldPerClick += 1
-    gameData.goldPerClickCost *= 2
-    update("goldMined", format(gameData.gold) + " Gold Mined")
-    update("perClickUpgrade", "Upgrade Pickaxe (Currently Level " + format(gameData.goldPerClick, "scientific") + ") Cost: " + format(gameData.goldPerClickCost, "scientific") + " Gold")
-  }
-}
 
 function incPriceBallpen() {
   gameData.ballpenPrice += 0.01
@@ -77,11 +63,3 @@ if (typeof saveGame.goldPerClick !== "undefined") gameData.goldPerClick = saveGa
 if (typeof saveGame.goldPerClickCost !== "undefined") gameData.goldPerClickCost = saveGame.goldPerClickCost;
 if (typeof saveGame.lastTick !== "undefined") gameData.lastTick = saveGame.lastTick;
 
-function tab(tab) {
-  // hide all your tabs, then show the one the user selected.
-  document.getElementById("mineGoldMenu").style.display = "none"
-  document.getElementById("shopMenu").style.display = "none"
-  document.getElementById(tab).style.display = "inline-block"
-}
-// go to a tab for the first time, so not all show
-tab("mineGoldMenu")
