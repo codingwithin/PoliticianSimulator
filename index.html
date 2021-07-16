@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Miner</title>
-</head>
-<body>
-    <p id="goldMined">0 Gold Mined</p>
-    <button onclick="mineGold()">Mine Gold</button>
-    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Politician Simulator</title>
+  </head>
+  <body>
+    <p id="dollarsStolen">$0.00 Stolen</p>
+    <p id="ballpenCost">Ballpen cost: $0.50</p>
+    <p id="ballpenPrice">Ballpen price: $1.00</p>
+    <p id="ballpenDemand">Ballpen demand: 1/sec</p>
+    <div id="navigateButtons">
+    <!--  <button onclick="tab('mineGoldMenu')">Go to Mine Gold</button>
+      <button onclick="tab('shopMenu')">Go to Shop</button> -->
+    </div>
+    <div id="adjBallpenMenu">
+      <button onclick="incPriceBallpen()">+</button>
+      <button onclick="decPriceBallpen()">-</button>
+    </div>
+    <p id="ballpenPenalty">Penalty if caught: $0.00</p>
+    <p id="ballpenPenaltyProbability">Penalty probability: 0%</p>
+    <p id="ballpenPenaltyNotification"></p>
+    <!-- <div id="shopMenu">
+      <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
+    </div> -->
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
-</body>
+  </body>
 </html>
