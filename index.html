@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Politician Simulator</title>
   </head>
-  <body>
+  <body onload="initiatePage()">
     <p id="dollarsStolen">$0.00 Stolen</p>
     <p id="ballpenCost">Ballpen cost: $0.50</p>
-    <p id="ballpenPrice">Ballpen price: $1.00</p>
+    <p id="ballpenPrice">Ballpen price: $0.60</p>
     <p id="ballpenDemand">Ballpen demand: 1/sec</p>
     <div id="navigateButtons">
     <!--  <button onclick="tab('mineGoldMenu')">Go to Mine Gold</button>
@@ -19,10 +19,12 @@
     </div>
     <p id="ballpenPenalty">Penalty if caught: $0.00</p>
     <p id="ballpenPenaltyProbability">Penalty probability: 0%</p>
-    <p id="ballpenPenaltyNotification"></p>
+    <p id="ballpenPenaltyNotification">&nbsp;</p>
     <!-- <div id="shopMenu">
       <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
     </div> -->
+    <button id="incBallpenPenaltyHRefButton" onclick="incBallpenPenaltyHRef()">Bribe Auditors: Increase Price Tolerance</button>
+    <p id="incBallpenPenaltyHRefPrice">Price: $25.00</p>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
   </body>
 </html>
